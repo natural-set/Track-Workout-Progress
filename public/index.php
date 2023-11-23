@@ -10,7 +10,7 @@ use Symfony\Component\Routing\RequestContext;
 $loader = new \Twig\Loader\FilesystemLoader(dirname(__DIR__) . '/resources/view');
 $twig = new \Twig\Environment($loader, [
     'cache' => dirname(__DIR__) . '/var/cache/twig',
-'debug' => true
+    'debug' => true
 ]);
 
 //https://github.com/symfony/routing

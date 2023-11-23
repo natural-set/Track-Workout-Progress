@@ -3,3 +3,11 @@ Hello Hello!
 It is a simple php structure to you play :)
 <br />
 param from controller: <strong>{{ param1 }}</strong>
+</br />
+Users: 
+<br />
+<ul>
+{% for user in users %}
+  <li>{{ user['name']}} [ {{ user.email }} ] </li>
+{% endfor %}
+</ul>
