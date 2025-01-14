@@ -1,8 +1,14 @@
-# Easy php steup
+# Track Workout Progress
+A tool to help you out **measuring** your progress in a more **visually way**.
+Professional teachers, athletes or even common people that **want to the next level of growth** can use it.
+You can **adapt your workout** the way fits you better, you can measure **sets, reps, time, weight** to measure details about **Volume** and **intensity**.
+For more details talk to __Natural Set__.
 
-It is a project for you have a quickly enverioment running.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/908c7d05-a53d-4e4f-8412-b3880b73daec" width="300" height="300" alt="Image description">
+</div>
 
-### Requiriments
+### Requiriments for environment
 
 Run the code bellow to make sure you have [docker][docker_link] and [git][git_link] installed.
 
@@ -21,8 +27,8 @@ Open a terminal into the folder that you save your projects.
 then copy and past the command bellow.
 
 ```sh
-git clone https://github.com/shield-wall/easy-php-setup.git \
-&& cd easy-php-setup \
+git clone https://github.com/spirit-sword/Track-Workout-Progress.git \
+&& cd TWP \
 && docker compose up -d --wait \
 && docker compose exec php composer install \
 && sleep 10 \
