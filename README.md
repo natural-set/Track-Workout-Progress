@@ -4,6 +4,10 @@ Professional teachers, athletes or even common people that **want to the next le
 You can **adapt your workout** the way fits you better, you can measure **sets, reps, time, weight** to measure details about **Volume** and **intensity**.
 For more details talk to __Natural Set__.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/908c7d05-a53d-4e4f-8412-b3880b73daec" width="300" height="300" alt="Image description">
+</div>
+
 ### Requiriments for environment
 
 Run the code bellow to make sure you have [docker][docker_link] and [git][git_link] installed.
