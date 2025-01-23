@@ -16,6 +16,7 @@
         "symfony/routing": "^6.3",
         "symfony/http-foundation": "^6.3",
         "twig/twig": "^3.0",
-        "twbs/bootstrap": "^5.3"
+        "twbs/bootstrap": "^5.3",
+        "symfony/asset": "^6.4"
     }
 }
