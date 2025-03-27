@@ -16,26 +16,32 @@ class UserController
      *
      * Note: getAll is an action.
      * */
-    public function getAll(Environment $twig): Response
+    // public function getAll(Environment $twig): Response
+    // {
+    //     /**
+    //      * I am instancing the user repository directly here, just to make thing more simple
+    //      * But in the real code it is injected.
+    //      *
+    //      * Then I recommend you study Dependency injection and Dependency inversion.
+    //      * For beginner it is not need to know it in deep, But you have an ideia how to use it.
+    //      **/
+    //     $repository = new UserRepository();
+    //     $users = $repository->findAll();
+
+    //     $template = $twig->render(
+    //         'user/index.twig',
+    //         [
+    //             'title' => 'Workout Hub',
+    //             'users' => $users,
+    //         ]
+    //     );
+
+    //     return new Response($template);
+    // }
+
+    public function indexPage(Environment $twig): Response
     {
-        /**
-         * I am instancing the user repository directly here, just to make thing more simple
-         * But in the real code it is injected.
-         *
-         * Then I recommend you study Dependency injection and Dependency inversion.
-         * For beginner it is not need to know it in deep, But you have an ideia how to use it.
-         **/
-        $repository = new UserRepository();
-        $users = $repository->findAll();
-
-        $template = $twig->render(
-            'user/index.twig',
-            [
-                'title' => 'Workout Hub',
-                'users' => $users,
-            ]
-        );
-
+        $template = $twig->render('user/index.twig');
         return new Response($template);
     }
 }

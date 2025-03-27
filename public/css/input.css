@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.exercise-slot {
+    @apply w-[90px] h-[120px];
+  }
+  
+  .sets-slot-size {
+    @apply min-w-[60px] max-w-[80px];
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
