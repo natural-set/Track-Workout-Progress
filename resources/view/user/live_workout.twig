@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title }}</title>
+		{# <link rel="stylesheet" href="/css/output.css"> #}
+
+	</head>
+
+	<body>
+
+		<div>
+			<div id="workout_header">
+				<h1>Workout</h1>
+				<span>-<span>
+						<h3 id="workout_name">Back</h3>
+
+						<div id="workout_timer_body">
+							<div id="workout_timer">00:00:00</div>
+						</div>
+					</div>
+
+
+					<div id="sets_container" style="display:none">
+
+						<h3 id="sets_title">Sets</h3>
+
+						{% include "/user/components/workout_sets_template.twig"%}
+
+						<div id="add_set_button_container">
+							<span>
+								add set
+								<button id="add_set_button">+</button>
+							</span>
+						</div>
+
+
+					</div>
+
+
+					<div>
+						<button id="start_stop_workout">Start Workout</button>
+					</div>
+
+					<div>
+						<span id="simple_message"></span>
+					</div>
+				</div>
+
+				<div id="statistics_container">
+					<h3>Statistics</h3>
+					<div id="statistics_body">
+						<div id="statistics_title">
+							<span>Exercise</span>
+							<span>Reps</span>
+							<span>Weight</span>
+							<span>Time</span>
+						</div>
+					</div>
+				</div>
+
+				<script type="module" src="assets/js/components/live_workout.js"></script>
+			</body>
+		</html>
+	</body>
+</html>

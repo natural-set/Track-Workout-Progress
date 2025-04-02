@@ -1,0 +1,17 @@
+<div class="flex border border-red-500 rounded items-center">
+	<input class="shadow appearance-none text-gray-300 text-center leading-tight py-2 focus:outline-none focus:shadow-outline w-10" type="number" placeholder="--" oninput="validateMinutesSecondsInput(this)">
+	<span class="shadow appearance-none text-gray-300 ">:</span>
+	<input class="shadow appearance-none text-gray-300 text-center leading-tight py-2 focus:outline-none focus:shadow-outline w-12" type="number" placeholder="--" oninput="validateMinutesSecondsInput(this)">
+	
+	{% include "user/icons/icon.twig" with { 'name': 'timer' } %}
+
+</div>
+{% block scripts %}
+	<script>
+		function validateMinutesSecondsInput(input) {
+        if (input.value.length > 2) input.value = input.value.slice(0, 2); // Prevent more than 2 characters
+        if (input.value < 0) input.value = 0;   // Prevent negative values
+        if (input.value > 59) input.value = 59; // Prevent values greater than 59
+    }
+	</script>
+{% endblock %}

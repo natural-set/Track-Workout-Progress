@@ -1,0 +1,27 @@
+{% block scripts %}
+    <script type="module">
+
+        import {createIcons} from '../../node_modules/lucide/dist/esm/lucide.js';
+
+        import {{ name|replace({'-':''}) }} from '../../node_modules/lucide/dist/esm/icons/{{name}}.js';
+
+        createIcons({
+        	icons: { {{name|replace({'-':''}) }} },
+        	attrs: { 
+                "stroke-width": "1.5"
+            }
+        });
+
+        function validateMinutesSecondsInput(input) {
+        if (input.value.length > 2) input.value = input.value.slice(0, 2); // Prevent more than 2 characters
+        if (input.value < 0) input.value = 0; // Prevent negative values
+        if (input.value > 59) input.value = 59; // Prevent values greater than 59
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+
+    <i data-lucide="{{ name|default(ellipsis) }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}" stroke-width="{{ strokeWidth|default(1.5) }}" color="{{ color|default('currentColor') }}"></i>
+
+{% endblock %}

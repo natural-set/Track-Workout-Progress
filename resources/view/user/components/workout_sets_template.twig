@@ -1,0 +1,31 @@
+{% block set_template%}
+	<div id="set_template">
+		<div id="set_fields_wrapper">
+			<div id="set_title">
+				<span>1 St</span>
+
+			</div>
+			<div id="set_fields_body">
+				<label>Reps</label>
+				<input id="set_fields_input_reps" type="number" placeholder="Reps" value="12">
+
+				<label>Weight</label>
+				<input id="set_fields_input_weight" type="number" placeholder="kg" value="10">
+
+				<label>Time</label>
+				<span id="set_fields_time" type="number">00:00</span>
+
+				<div id="rest_set_container" style="display:none">
+					<label>Rest Time:</label>
+					<span id="rest_time">00:00</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="do_next_set_container" style="display:none">
+		<button id="do_next_set_button">Do next set</button>
+	</div>
+
+{% endblock %}
