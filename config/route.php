@@ -2,7 +2,6 @@
 <?php
 
 use App\Controller\LiveWorkoutController;
-use App\Controller\TestController;
 use App\Controller\UserController;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
@@ -27,3 +26,10 @@ $live_workout_page = new Route(
 
 );
 $routes->add('live_workout_page', $live_workout_page);
+
+
+$exercises = new Route(
+    '/exercises',
+    ['_controller' => LiveWorkoutController::class, '_method' => 'getExercises']
+);
+$routes->add('exercises', $exercises);

@@ -3,4 +3,4 @@ var/
 .php-cs-fixer.cache
 node_modules/
 scratch/
-public/js/debug
+public/assets/js/debug/

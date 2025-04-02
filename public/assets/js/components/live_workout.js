@@ -117,10 +117,10 @@ const workout = {
     info: { workout_time: 1080 },
     sets: [
         { reps: 7, weight: 80, execution_time: 21, rest_time: 180, rpe: 4 },
-        { reps: 10, weight: 80, execution_time: 30, rest_time: 180, rpe: 5  },
-        { reps: 6, weight: 90, execution_time: 21, rest_time: 180, rpe: 8  },
-        { reps: 9, weight: 80, execution_time: 27, rest_time: 180, rpe: 6  },
-        { reps: 5, weight: 80, execution_time: 15, rest_time: 180, rpe: 7  }
+        { reps: 10, weight: 80, execution_time: 30, rest_time: 180, rpe: 5 },
+        { reps: 6, weight: 90, execution_time: 21, rest_time: 180, rpe: 8 },
+        { reps: 9, weight: 80, execution_time: 27, rest_time: 180, rpe: 6 },
+        { reps: 5, weight: 80, execution_time: 15, rest_time: 180, rpe: 7 }
     ]
 };
 
@@ -146,3 +146,8 @@ volumeLoad.ratePerceivedExertion().forEach((rpe, index) => {
 console.log("Workout RPE: " + volumeLoad.overAllRatePerceivedExertion().value + " | " + "Workout RPE description: " + volumeLoad.overAllRatePerceivedExertion().description);
 
 
+fetch("/exercises")
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+})
