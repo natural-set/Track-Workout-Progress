@@ -88,10 +88,15 @@ SELECT
   s.execution_time,
   s.rest_time,
   s.rpe
-FROM workouts w
-JOIN workout_blocks b ON w.workout_id = b.workout_id
-JOIN exercises e ON b.block_id = e.block_id
-JOIN sets s ON e.exercise_id = s.exercise_id
+FROM workout w
+JOIN workout_block b ON w.workout_id = b.workout_id
+JOIN exercise e ON b.block_id = e.block_id
+JOIN set s ON e.exercise_id = s.exercise_id
 ORDER BY w.workout_id, b.block_order, e.exercise_order, s.set_order;
  */
+
+-- TRUNCATE TABLE `user`;
+-- TRUNCATE TABLE `workout`;
+-- TRUNCATE TABLE `workout_block`;
+-- TRUNCATE TABLE `exercise`;
 -- 2023-11-23 17:42:10
